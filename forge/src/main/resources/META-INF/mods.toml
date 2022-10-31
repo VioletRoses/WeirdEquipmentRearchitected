@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[43,)"
+issueTrackerURL = "https://github.com/VioletRoses/WeirdEquipment/issues"
+license = "MIT"
+
+[[mods]]
+modId = "weird_equipment"
+version = "${version}"
+displayName = "Weird Equipment"
+authors = "VioletRoses"
+description = '''
+A collection of strange tools, weapons, and armor, meant to fit in with vanilla.
+'''
+#logoFile = ""
+
+[[dependencies.weird_equipment]]
+modId = "forge"
+mandatory = true
+versionRange = "[43,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.weird_equipment]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.19.0,1.19.2)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.weird_equipment]]
+modId = "architectury"
+mandatory = true
+versionRange = "[6.2.43,)"
+ordering = "AFTER"
+side = "BOTH"

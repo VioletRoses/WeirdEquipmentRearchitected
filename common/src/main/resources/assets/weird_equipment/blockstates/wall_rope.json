@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "weird_equipment:block/wall_rope" },
+    "facing=east": { "model": "weird_equipment:block/wall_rope", "y": 90 },
+    "facing=south": { "model": "weird_equipment:block/wall_rope", "y": 180 },
+    "facing=west": { "model": "weird_equipment:block/wall_rope", "y": 270 }
+  }
+}
