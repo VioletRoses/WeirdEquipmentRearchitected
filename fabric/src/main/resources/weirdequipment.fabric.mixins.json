@@ -1,0 +1,18 @@
+{
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "package": "xyz.venividivivi.weirdequipment.fabric.mixin",
+  "required": true,
+
+  "mixins": [
+    "MatchToolLootConditionMixin",
+    "PumpkinBlockMixin",
+    "SheepEntityMixin"
+  ],
+  "client": [
+  ],
+
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

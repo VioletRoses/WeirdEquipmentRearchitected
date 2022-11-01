@@ -1,0 +1,17 @@
+{
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "package": "xyz.venividivivi.weirdequipment.mixin",
+  "required": true,
+
+  "mixins": [
+    "BucketItemMixin",
+    "ZombieEntityMixin"
+  ],
+  "client": [
+  ],
+
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

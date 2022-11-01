@@ -12,16 +12,20 @@
     "issues": "https://github.com/VioletRoses/WeirdEquipment/issues"
   },
   "license": "MIT",
-  "icon": "assets/weird_equipment/icon.png",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "xyz.venividivivi.fabric.WeirdEquipmentFabric"
+      "xyz.venividivivi.weirdequipment.fabric.WeirdEquipmentFabric"
     ],
     "dynamiclights": [
-      "xyz.venividivivi.fabric.addon.DynamicLightsAddon"
+      "xyz.venividivivi.weirdequipment.fabric.addon.DynamicLightsAddon"
     ]
   },
+  "mixins": [
+    "weirdequipment.common.mixins.json",
+    "weirdequipment.fabric.mixins.json"
+  ],
   "depends": {
     "fabric": "*",
     "minecraft": ">=1.19",
