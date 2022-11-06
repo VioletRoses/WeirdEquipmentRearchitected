@@ -19,6 +19,6 @@ public class WeirdEquipment {
             WeirdEquipmentEntityRenderers.register();
             WeirdEquipmentModelProviders.register();
         }
-        System.out.println(ExampleExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
+        System.out.println(WeirdEquipmentExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }
 }
