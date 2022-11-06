@@ -20,6 +20,9 @@
     ],
     "dynamiclights": [
       "xyz.venividivivi.weirdequipment.fabric.addon.DynamicLightsAddon"
+    ],
+    "modmenu": [
+      "xyz.venividivivi.weirdequipment.fabric.addon.ModMenuAddon"
     ]
   },
   "mixins": [

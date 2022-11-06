@@ -24,6 +24,10 @@ repositories {
         name 'Gegy'
         url 'https://maven.gegy.dev/releases'
     }
+    maven {
+        name 'Terraformers'
+        url 'https://maven.terraformersmc.com/releases/'
+    }
 }
 
 dependencies {
@@ -36,8 +40,10 @@ dependencies {
     modApi("dev.lambdaurora:lambdynamiclights:${project.lambdynamiclights_version}+${rootProject.minecraft_base_version}") {
         exclude(group: "net.fabricmc.fabric-api")
         exclude(group: "io.github.queerbric")
-        exclude(group: "com.terraformersmc")
     }
+
+    //Mod Menu
+    modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
