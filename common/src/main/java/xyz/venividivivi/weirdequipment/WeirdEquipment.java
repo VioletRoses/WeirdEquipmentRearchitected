@@ -2,6 +2,7 @@ package xyz.venividivivi.weirdequipment;
 
 import dev.architectury.platform.Platform;
 import net.fabricmc.api.EnvType;
+import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfig;
 import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentBlocks;
 import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentEntityTypes;
 import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentItems;
@@ -15,10 +16,11 @@ public class WeirdEquipment {
         WeirdEquipmentBlocks.register();
         WeirdEquipmentItems.register();
         WeirdEquipmentEntityTypes.register();
+        WeirdEquipmentConfig.init();
         if(Platform.getEnv().equals(EnvType.CLIENT)) {
             WeirdEquipmentEntityRenderers.register();
             WeirdEquipmentModelProviders.register();
         }
-        System.out.println(WeirdEquipmentExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
+        //System.out.println(WeirdEquipmentExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }
 }

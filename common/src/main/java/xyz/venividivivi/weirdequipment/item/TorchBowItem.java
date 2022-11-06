@@ -13,6 +13,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfig;
 import xyz.venividivivi.weirdequipment.entity.TorchArrowEntity;
 import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentItems;
 
@@ -59,7 +60,7 @@ public class TorchBowItem extends BowItem {
                                 playerEntity.getInventory().removeOne(itemStack);
                             }
                         } else if (!isCreativeAndHasAmmo && itemStack.getItem().equals(WeirdEquipmentItems.NETHERITE_TORCH_PICKAXE.get())) {
-                            user.getMainHandStack().damage(5, playerEntity, (p) -> p.sendToolBreakStatus(playerEntity.preferredHand));
+                            user.getMainHandStack().damage(WeirdEquipmentConfig.NETHERITE_TORCH_PICKAXE_DURABILITY_LOSS, playerEntity, (p) -> p.sendToolBreakStatus(playerEntity.preferredHand));
                         }
                             stack.damage(1, playerEntity, (p) -> p.sendToolBreakStatus(playerEntity.getActiveHand()));
                     }

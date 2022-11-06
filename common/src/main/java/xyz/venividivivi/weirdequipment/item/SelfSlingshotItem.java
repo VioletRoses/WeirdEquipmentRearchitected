@@ -12,6 +12,7 @@ import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfig;
 //import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfig;
 
 public class SelfSlingshotItem extends BowItem {
@@ -26,7 +27,7 @@ public class SelfSlingshotItem extends BowItem {
             float soundPitch = 0.05f;
             if (!((double) f < 0.1)) {
                 if (user.raycast(5.0, 0, false).getType() == HitResult.Type.BLOCK) {
-                    //f = f * WeirdEquipmentConfig.SELF_SLINGSHOT_VELOCITY;
+                    f = f * WeirdEquipmentConfig.SELF_SLINGSHOT_VELOCITY;
                     float yaw = playerEntity.getYaw(), pitch = playerEntity.getPitch();
                     float g = -MathHelper.sin(yaw * 0.017453292F) * MathHelper.cos(pitch * 0.017453292F);
                     float h = -MathHelper.sin((pitch) * 0.017453292F);

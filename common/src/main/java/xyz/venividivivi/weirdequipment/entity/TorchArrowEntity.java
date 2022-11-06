@@ -20,6 +20,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
+import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfig;
 import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentEntityTypes;
 
 public class TorchArrowEntity extends PersistentProjectileEntity {
@@ -71,8 +72,7 @@ public class TorchArrowEntity extends PersistentProjectileEntity {
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
         Entity entity = entityHitResult.getEntity();
-        if (entityHitResult.getEntity() instanceof LivingEntity) {
-            // && WeirdEquipmentConfig.TORCH_BOW_CAN_DAMAGE_MOBS
+        if (entityHitResult.getEntity() instanceof LivingEntity && WeirdEquipmentConfig.TORCH_BOW_CAN_DAMAGE_MOBS) {
             entity.setOnFire(true);
             entity.setOnFireFor(fireTime);
             entity.damage(DamageSource.arrow(this, this.getOwner()), (float) getDamage());

@@ -29,7 +29,8 @@ public class WeirdEquipmentItems {
     public static final RegistrySupplier<Item> DIRT_SWORD = ITEMS.register("dirt_sword", () ->
             new SwordItem(ToolMaterials.WOOD, -3, -2.6f, new Item.Settings().group(ItemGroup.COMBAT)));
 
-
+    public static final RegistrySupplier<Item> FLINT_AND_SHEARS = ITEMS.register("flint_and_shears", () ->
+            new FlintAndShearsItem(new Item.Settings().maxDamage(300).group(ItemGroup.TOOLS)));
     public static final RegistrySupplier<Item> SELF_SLINGSHOT = ITEMS.register("self_slingshot", () ->
             new SelfSlingshotItem(new Item.Settings().group(ItemGroup.TOOLS).maxDamage(350)));
 

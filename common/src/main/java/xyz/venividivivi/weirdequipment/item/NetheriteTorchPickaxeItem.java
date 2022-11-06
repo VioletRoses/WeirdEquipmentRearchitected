@@ -15,6 +15,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
+import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfig;
 
 public class NetheriteTorchPickaxeItem extends PickaxeItem {
     public NetheriteTorchPickaxeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
@@ -38,7 +39,7 @@ public class NetheriteTorchPickaxeItem extends PickaxeItem {
             world.setBlockState(blockPos, blockState);
             world.emitGameEvent(playerEntity, GameEvent.BLOCK_CHANGE, blockPos);
             if (playerEntity instanceof ServerPlayerEntity) {
-                context.getStack().damage(5, playerEntity, (p) -> p.sendToolBreakStatus(context.getHand()));
+                context.getStack().damage(WeirdEquipmentConfig.NETHERITE_TORCH_PICKAXE_DURABILITY_LOSS, playerEntity, (p) -> p.sendToolBreakStatus(context.getHand()));
             }
             return ActionResult.SUCCESS;
         }
