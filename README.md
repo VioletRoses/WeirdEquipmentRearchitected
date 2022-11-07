@@ -1,6 +1,6 @@
 # Weird Equipment Rearchitected
 ## A small Minecraft mod that adds somewhat strange (but useful!) equipment.
-### This is a rewrite/port of [Weird Equipment](https://github.com/VioletRoses/WeirdEquipment), created to make exporting to Forge easier. At this point it is basically feature-complete, only missing the configuration options.
+### This is a rewrite/port of [Weird Equipment](https://github.com/VioletRoses/WeirdEquipment), created to make exporting to Forge easier. At this point it is basically feature-complete.
 ### Fabric: [LambDynamicLights](https://github.com/LambdAurora/LambDynamicLights) and [Cloth Config](https://github.com/shedaniel/cloth-config) are recommended for full functionality.
 ### Forge: [OptiFine](https://optifine.net/downloads)/[Dynamic Lights](https://www.curseforge.com/minecraft/mc-mods/dynamic-lights) and [Cloth Config](https://github.com/shedaniel/cloth-config) are recommended for full functionality.
 
