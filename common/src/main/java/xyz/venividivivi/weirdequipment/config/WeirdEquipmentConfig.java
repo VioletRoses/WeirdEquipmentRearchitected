@@ -15,7 +15,6 @@ import java.io.IOException;
 public class WeirdEquipmentConfig {
     protected static final Logger LOGGER = LoggerFactory.getLogger("Weird Equipment Config");
     protected static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
-    //private static final File FILE = FabricLoader.getInstance().getConfigDir().resolve("weird_equipment.json").toFile();
     private static final File FILE = WeirdEquipmentExpectPlatform.getConfigDirectory().resolve("weird_equipment.json").toFile();
     public static boolean TORCH_BOW_CAN_DAMAGE_MOBS = true;
     public static int NETHERITE_TORCH_PICKAXE_DURABILITY_LOSS = 5;
