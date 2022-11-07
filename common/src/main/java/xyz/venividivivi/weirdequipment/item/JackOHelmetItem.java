@@ -20,8 +20,11 @@ public class JackOHelmetItem extends ArmorItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if (Platform.isFabric() && !Platform.isModLoaded("lambdynlights") || Platform.isForge() && !Platform.isModLoaded("dynamiclights")) {
-            tooltip.add(Text.translatable("item.weird_equipment.jack_o_helmet.lambdynlights_warning"));
+        if (Platform.isModLoaded("optifine") || Platform.isModLoaded("optifabric")) {
+        } else if (Platform.isFabric() && !Platform.isModLoaded("lambdynlights")) {
+            tooltip.add(Text.translatable("item.weird_equipment.jack_o_helmet.lambdynlights_warning.fabric"));
+        } else if (Platform.isForge() && !Platform.isModLoaded("dynamiclights")) {
+            tooltip.add(Text.translatable("item.weird_equipment.jack_o_helmet.lambdynlights_warning.forge"));
         }
     }
 }
