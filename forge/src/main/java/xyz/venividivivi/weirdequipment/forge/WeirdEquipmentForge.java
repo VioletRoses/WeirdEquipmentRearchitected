@@ -2,7 +2,6 @@ package xyz.venividivivi.weirdequipment.forge;
 
 import dev.architectury.platform.Platform;
 import dev.architectury.platform.forge.EventBuses;
-import net.fabricmc.api.EnvType;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraftforge.api.distmarker.Dist;
