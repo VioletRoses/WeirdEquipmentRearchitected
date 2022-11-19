@@ -21,5 +21,5 @@
 
 ## Download:
 ### <img src="https://camo.githubusercontent.com/ce7d984a9a92f8f610e17795df90bad1fc2ac27f42078bd26db5f67395fbf62a/68747470733a2f2f637369732e706163652e6564752f7e736368617266662f706163656d6f62696c656c61622f696d616765732f6769746875622e6a7067" width="25" height="25"> [Github Releases](https://github.com/VioletRoses/WeirdEquipmentRearchitected/releases)
-### <img src="https://styles.redditmedia.com/t5_3errm/styles/communityIcon_626lcjroufc61.png?width=256&s=649b71858126bcbb3e49b57ce6ec640f5e7ecba4" width="25" height="25"> [Curseforge](https://www.curseforge.com/minecraft/mc-mods/weird-equipment-fabric/files/all)
+### <img src="https://styles.redditmedia.com/t5_3errm/styles/communityIcon_626lcjroufc61.png?width=256&s=649b71858126bcbb3e49b57ce6ec640f5e7ecba4" width="25" height="25"> [Curseforge](https://www.curseforge.com/minecraft/mc-mods/weird-equipment)
 ### <img src="https://docs.modrinth.com/img/logo.svg" width="25" height="25"> [Modrinth](https://modrinth.com/mod/weird-equipment)
