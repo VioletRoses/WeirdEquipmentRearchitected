@@ -33,9 +33,6 @@ public class WeirdEquipmentItems {
     public static final RegistrySupplier<Item> SELF_SLINGSHOT = ITEMS.register("self_slingshot", () ->
             new SelfSlingshotItem(new Item.Settings().arch$tab(ItemGroups.TOOLS).maxDamage(350)));
 
-    public static final RegistrySupplier<Item> BLOCK_CANNON = ITEMS.register("block_cannon", () ->
-            new BlockCannonItem(new Item.Settings().arch$tab(ItemGroups.TOOLS).maxDamage(640)));
-
     public static final RegistrySupplier<Item> DIAMOND_SHEARS = ITEMS.register("diamond_shears", () ->
             new ShearsItem(new Item.Settings().maxDamage(1000).arch$tab(ItemGroups.TOOLS)));
     public static final RegistrySupplier<Item> NETHERITE_TORCH_PICKAXE = ITEMS.register("netherite_torch_pickaxe", () ->
