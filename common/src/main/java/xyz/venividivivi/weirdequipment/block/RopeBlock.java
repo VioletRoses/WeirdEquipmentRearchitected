@@ -27,7 +27,7 @@ public class RopeBlock extends Block {
     @Override
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
         if (!world.getBlockState(pos.offset(Direction.UP)).isSideSolid(world, pos.offset(Direction.UP), Direction.DOWN, SideShapeType.CENTER)) {
-            world.createAndScheduleBlockTick(pos, WeirdEquipmentBlocks.ROPE.get(), 1);
+            world.scheduleBlockTick(pos, WeirdEquipmentBlocks.ROPE.get(), 1);
         }
         super.neighborUpdate(state, world, pos, sourceBlock, sourcePos, notify);
     }

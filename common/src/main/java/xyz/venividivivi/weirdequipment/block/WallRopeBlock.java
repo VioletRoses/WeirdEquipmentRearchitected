@@ -51,7 +51,7 @@ public class WallRopeBlock extends HorizontalFacingBlock {
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
         Direction side = state.get(FACING);
         if (!world.getBlockState(pos.offset(side)).isSideSolid(world, pos.offset(side), side.getOpposite(), SideShapeType.CENTER)) {
-            world.createAndScheduleBlockTick(pos, WeirdEquipmentBlocks.WALL_ROPE.get(), 1);
+            world.scheduleBlockTick(pos, WeirdEquipmentBlocks.WALL_ROPE.get(), 1);
         }
         super.neighborUpdate(state, world, pos, sourceBlock, sourcePos, notify);
     }

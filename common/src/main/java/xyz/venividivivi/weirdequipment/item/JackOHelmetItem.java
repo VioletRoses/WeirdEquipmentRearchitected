@@ -1,9 +1,7 @@
 package xyz.venividivivi.weirdequipment.item;
 
 import dev.architectury.platform.Platform;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
@@ -14,8 +12,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class JackOHelmetItem extends ArmorItem {
-    public JackOHelmetItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
-        super(material, slot, settings);
+    public JackOHelmetItem(ArmorMaterial material, Type type, Settings settings) {
+        super(material, type, settings);
     }
 
     @Override

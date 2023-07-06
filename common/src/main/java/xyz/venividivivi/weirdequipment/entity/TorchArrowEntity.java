@@ -7,7 +7,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
@@ -31,12 +30,12 @@ public class TorchArrowEntity extends PersistentProjectileEntity {
 
     public TorchArrowEntity(EntityType<? extends PersistentProjectileEntity> entityType, World world) {
         super(entityType, world);
-        this.world = world;
+        this.world = getWorld();
     }
 
     public TorchArrowEntity(World world, LivingEntity owner) {
         super(WeirdEquipmentEntityTypes.TORCH_ARROW.get(), owner, world);
-        this.world = world;
+        this.world = getWorld();
         playerEntity = (PlayerEntity) owner;
     }
 
@@ -75,7 +74,7 @@ public class TorchArrowEntity extends PersistentProjectileEntity {
         if (entityHitResult.getEntity() instanceof LivingEntity && WeirdEquipmentConfig.TORCH_BOW_CAN_DAMAGE_MOBS) {
             entity.setOnFire(true);
             entity.setOnFireFor(fireTime);
-            entity.damage(DamageSource.arrow(this, this.getOwner()), (float) getDamage());
+            entity.damage(entity.getWorld().getDamageSources().arrow(this, this.getOwner()), (float) getDamage());
         } else world.spawnEntity(new ItemEntity(world, getX(), getY(), getZ(), new ItemStack(Items.TORCH, 1)));
         remove(RemovalReason.DISCARDED);
     }

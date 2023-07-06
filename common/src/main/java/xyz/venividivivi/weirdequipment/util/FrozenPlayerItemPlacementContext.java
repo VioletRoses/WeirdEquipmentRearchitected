@@ -33,7 +33,7 @@ public class FrozenPlayerItemPlacementContext extends ItemPlacementContext {
     }
 
     @Override
-    public Direction getPlayerFacing() {
+    public Direction getHorizontalPlayerFacing() {
         return horizontalFacing;
     }
 

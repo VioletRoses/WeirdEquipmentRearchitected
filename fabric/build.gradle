@@ -1,5 +1,5 @@
 plugins {
-    id "com.github.johnrengelman.shadow" version "7.1.2"
+    id "com.github.johnrengelman.shadow" version "8.1.1"
 }
 
 architectury {
@@ -37,7 +37,7 @@ dependencies {
     modApi "dev.architectury:architectury-fabric:${rootProject.architectury_version}"
 
     //LambDynamicLights
-    modApi("dev.lambdaurora:lambdynamiclights:${project.lambdynamiclights_version}+${rootProject.minecraft_base_version}") {
+    modApi("dev.lambdaurora:lambdynamiclights:${project.lambdynamiclights_version}+${rootProject.minecraft_version}") {
         exclude(group: "net.fabricmc.fabric-api")
         exclude(group: "io.github.queerbric")
     }
@@ -61,18 +61,18 @@ shadowJar {
     exclude "architectury.common.json"
 
     configurations = [project.configurations.shadowCommon]
-    classifier "dev-shadow"
+    archiveClassifier.set "dev-shadow"
 }
 
 remapJar {
     injectAccessWidener = true
     input.set shadowJar.archiveFile
     dependsOn shadowJar
-    classifier null
+    archiveClassifier.set null
 }
 
 jar {
-    classifier "dev"
+    archiveClassifier.set "dev"
 }
 
 sourcesJar {

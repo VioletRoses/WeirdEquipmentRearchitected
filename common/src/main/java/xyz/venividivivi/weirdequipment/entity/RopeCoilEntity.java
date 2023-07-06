@@ -29,12 +29,13 @@ public class RopeCoilEntity extends ThrownItemEntity {
     private BlockPos blockPos = null;
     private int i = 0;
     private int count = 0;
+    public World world = getWorld();
 
     public RopeCoilEntity(World world, LivingEntity owner, RopeCoilItem item) {
         super(WeirdEquipmentEntityTypes.ROPE_COIL.get(), owner, world);
         count = item.count;
         getDataTracker().startTracking(STACK, new ItemStack(item, 1));
-        this.world = world;
+        this.setWorld(getWorld());
     }
 
     public RopeCoilEntity(EntityType<RopeCoilEntity> ropeCoilEntityEntityType, World world) {

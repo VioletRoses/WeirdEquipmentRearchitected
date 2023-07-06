@@ -29,6 +29,8 @@ import xyz.venividivivi.weirdequipment.util.FrozenPlayerItemPlacementContext;
 public class BlockCannonShotEntity extends ThrownItemEntity {
     public static final TrackedData<ItemStack> STACK = DataTracker.registerData(BlockCannonShotEntity.class, TrackedDataHandlerRegistry.ITEM_STACK);
     public Direction[] facing = null;
+    public World world = getWorld();
+
     public BlockCannonShotEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
         getDataTracker().startTracking(STACK, new ItemStack(Items.AIR, 1));

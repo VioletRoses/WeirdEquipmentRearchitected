@@ -1,7 +1,6 @@
 package xyz.venividivivi.weirdequipment.item;
 
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
@@ -13,7 +12,7 @@ public class CactusSword extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        attacker.damage(DamageSource.CACTUS, 1);
+        attacker.damage(attacker.getWorld().getDamageSources().cactus(), 1);
         return super.postHit(stack, target, attacker);
     }
 }
