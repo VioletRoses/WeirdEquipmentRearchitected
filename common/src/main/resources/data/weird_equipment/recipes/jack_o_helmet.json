@@ -16,13 +16,5 @@
   "result": {
     "item": "weird_equipment:jack_o_helmet",
     "count": 1
-  },
-  "fabric:load_conditions": [
-    {
-      "condition": "fabric:all_mods_loaded",
-      "values": [
-        "lambdynlights"
-      ]
-    }
-  ]
+  }
 }
