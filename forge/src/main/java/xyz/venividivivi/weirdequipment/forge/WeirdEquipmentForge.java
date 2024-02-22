@@ -4,14 +4,13 @@ import dev.architectury.platform.Platform;
 import dev.architectury.platform.forge.EventBuses;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.ConfigScreenHandler;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import xyz.venividivivi.weirdequipment.WeirdEquipment;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfigScreen;
 import xyz.venividivivi.weirdequipment.forge.addon.RyoamicLightsAddon;
-
 
 @Mod(WeirdEquipment.MOD_ID)
 public class WeirdEquipmentForge {
@@ -24,12 +23,7 @@ public class WeirdEquipmentForge {
                     () -> new ConfigScreenHandler.ConfigScreenFactory((minecraftClient, screen) -> WeirdEquipmentConfigScreen.init(screen)));
         }
         if(Platform.getEnv().equals(Dist.CLIENT) && Platform.isModLoaded("ryoamiclights")) {
-            FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setupComplete);
+            MinecraftForge.EVENT_BUS.addListener(RyoamicLightsAddon::onInitializeDynamicLights);
         }
-
-    }
-
-    private void setupComplete(FMLLoadCompleteEvent evt) {
-        new RyoamicLightsAddon().onInitializeDynamicLights();
     }
 }

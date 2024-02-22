@@ -1,12 +1,11 @@
 package xyz.venividivivi.weirdequipment.forge.addon;
 
-import dev.lambdaurora.lambdynlights.api.DynamicLightHandlers;
-import dev.lambdaurora.lambdynlights.api.DynamicLightsInitializer;
+import org.thinkingstudio.ryoamiclights.api.DynamicLightHandlers;
+import org.thinkingstudio.ryoamiclights.forge.api.DynamicLightsInitializerEvent;
 import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentEntityTypes;
 
-public class RyoamicLightsAddon implements DynamicLightsInitializer {
-    @Override
-    public void onInitializeDynamicLights() {
+public class RyoamicLightsAddon {
+    public static void onInitializeDynamicLights(DynamicLightsInitializerEvent event) {
         DynamicLightHandlers.registerDynamicLightHandler(WeirdEquipmentEntityTypes.TORCH_ARROW.get(), lightSource -> 12);
     }
 }
